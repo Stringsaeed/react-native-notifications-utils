@@ -58,7 +58,6 @@ NotificationsUtils.openSettings();
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## Author
-___
  - [**@stringsaeed**](https://www.github.com/stringsaeed)
 
 
