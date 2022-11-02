@@ -1,8 +1,10 @@
-# react-native-notifications-utils
+<div align="center">
+  <div style="padding: 30px">
+    <img src=".github/images/icon.png" alt="React Native Notifications Utils logo" width="50%" />
+  </div>
+</div>
 
-A simple package for notifications utils.
-
-![Bell Illustration](.github/images/icon.png)
+# `react-native-notifications-utils`
 
 ## Features
 - [X] Opening App Notifications Settings for Android and iOS
