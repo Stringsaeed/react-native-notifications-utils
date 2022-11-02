@@ -1,6 +1,6 @@
 <div align="center">
-  <div style="padding: 30px">
-    <img src=".github/images/icon.png" alt="React Native Notifications Utils logo" width="50%" />
+  <div style="margin-bottom: 24px; height: 100px">
+    <img src=".github/images/icon.png" alt="React Native Notifications Utils logo" width="100px" height="100px" />
   </div>
 </div>
 
