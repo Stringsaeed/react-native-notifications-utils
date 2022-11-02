@@ -1,7 +1,7 @@
 {
   "name": "react-native-notifications-utils",
   "version": "0.2.0",
-  "description": "test",
+  "description": "react native (native module) notifications utils, for making notifications easier",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -38,7 +38,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "notifications",
+    "utils",
+    "notifications settings",
+    "open notifications settings",
+    "open app settings"
   ],
   "repository": "https://github.com/Stringsaeed/react-native-notifications-utils",
   "author": "Muhammed Saeed <Stringsaeed@gmail.com> (https://github.com/Stringsaeed)",
