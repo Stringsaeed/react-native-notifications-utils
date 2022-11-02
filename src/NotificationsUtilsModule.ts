@@ -6,7 +6,7 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const NotificationsUtils = NativeModules.NotificationsUtils
+const NotificationsUtilsModule = NativeModules.NotificationsUtils
   ? NativeModules.NotificationsUtils
   : new Proxy(
       {},
@@ -17,6 +17,4 @@ const NotificationsUtils = NativeModules.NotificationsUtils
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return NotificationsUtils.multiply(a, b);
-}
+export default NotificationsUtilsModule;
