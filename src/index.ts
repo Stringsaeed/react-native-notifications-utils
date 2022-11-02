@@ -1,42 +1,39 @@
 import { Platform } from 'react-native';
 import NotificationsUtilsModule from './NotificationsUtilsModule';
 
-type OpenSettingsOptions = {
-  channelId?: string;
-};
-
 interface INotificationsUtils {
   /**
    * API used to open the Platform specific System settings for the application.
    *
-   * If the API version is >= 26:
-   * - With no `channelId`, the notification settings screen is displayed.
-   * - With a `channelId`, the notification settings screen for the specific channel is displayed.
+   * On Android:
+   * API version is >= 26 with `channelId` will open the channel settings. if `channelI` is not provided, the app's notification settings will be opened.
+   * API version is < 26, the application settings screen is opened.
+   * On iOS:
+   * If the version of iOS is >= 15.4, the app's  notification settings screen is displayed.
+   * If the version of iOS is < 15.4, the app's settings screen is displayed.
+   * On iOS:
+   * If the version of iOS is >= 15.4, the app's notification settings screen is displayed.
+   * If the version of iOS is < 15.4, the app's settings screen is displayed.
+   * @see https://developer.apple.com/documentation/uikit/uiapplication/4013180-opennotificationsettingsurlstrin
+   * @see https://developer.apple.com/documentation/uikit/uiapplicationopennotificationsettingsurlstring?language=objc
+   * @see https://developer.apple.com/documentation/uikit/uiapplication/1623042-opensettingsurlstring
    *
-   * If the API version is < 26, the application settings screen is displayed. The `channelId`
-   * is ignored.
-   *
-   * If an invalid `channelId` is provided (e.g. does not exist), the settings screen will redirect
-   * back to your application.
-   *
-   * On iOS, this is a no-op & instantly resolves.
    *
    * @platform android
    * @param channelId The ID of the channel which will be opened. Can be ignored/omitted to display the
    * overall notification settings.
    */
-  openSettings(options?: OpenSettingsOptions): Promise<void>;
+  openSettings(channelId?: string): void;
 }
 
 const NotificationsUtils: INotificationsUtils = {
-  openSettings: (options) => {
+  openSettings: (channelId) => {
     if (Platform.OS === 'android') {
-      if (typeof options?.channelId !== 'string') {
+      if (channelId && typeof channelId !== 'string') {
         throw new Error(
-          `NotificationsUtils.openSettings: Expected 'channelId' to be a string, got ${typeof options?.channelId}.`
+          `NotificationsUtils.openSettings: Expected 'channelId' to be a string, got ${typeof channelId}.`
         );
       }
-      const { channelId } = options;
 
       return NotificationsUtilsModule.openAppNotificationsSettings(channelId);
     }

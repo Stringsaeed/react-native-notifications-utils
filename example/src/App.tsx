@@ -12,7 +12,7 @@ export default function App() {
     if (status !== 'granted') {
       await requestNotifications(['alert', 'sound']);
     }
-    NotificationsUtils.openSettings({ channelId: 'default' });
+    NotificationsUtils.openSettings('default');
   };
 
   return (
