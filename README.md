@@ -12,7 +12,6 @@
 
 
 ## Installation
----
 ```sh
 yarn add react-native-notifications-utils
 ```
@@ -25,7 +24,6 @@ cd ios && pod install
 
 
 ## Usage
----
 
 ```typescript
 import NotificationsUtils from "react-native-notifications-utils";
@@ -36,7 +34,6 @@ NotificationsUtils.openSettings();
 ```
 
 ## API
----
 
 ### `openSettings(channelId?: string)`
  API used to open the Platform specific System settings for the application.
@@ -66,14 +63,12 @@ ___
 
 
 ## License
----
 
 MIT
 
 
 
 ### TODO:
----
 - [ ] Add tests
 - [ ] Add support for request permissions
 - [ ] Keeps updated with new native features
