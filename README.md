@@ -18,6 +18,8 @@ yarn add react-native-notifications-utils
 
 ### iOS
 
+> 📝 **_NOTE:_** requires Xcode 14+ (iOS 16)
+
 ```sh
 cd ios && pod install
 ```
