@@ -6,12 +6,17 @@
 
 # `react-native-notifications-utils`
 
-## Features
-- [X] Opening App Notifications Settings for Android and iOS
-- [X] Typescript
+## ✨ Features
+- Opening App Notifications Settings for Android and iOS
+
+- Typescript
+
+- Built for already in production app
 
 
-## Installation
+
+
+## 🧱 Installation
 ```sh
 yarn add react-native-notifications-utils
 ```
@@ -25,7 +30,8 @@ cd ios && pod install
 ```
 
 
-## Usage
+
+## ⚙️ Usage
 
 ```typescript
 import NotificationsUtils from "react-native-notifications-utils";
@@ -35,7 +41,9 @@ import NotificationsUtils from "react-native-notifications-utils";
 NotificationsUtils.openSettings();
 ```
 
-## API
+
+
+## 📜 API
 
 ### `openSettings(channelId?: string)`
  API used to open the Platform specific System settings for the application.
@@ -55,12 +63,19 @@ NotificationsUtils.openSettings();
     - [Apple's iOS 16 documentation for `openNotificationSettingsURLString`]( https://developer.apple.com/documentation/uikit/uiapplication/4013180-opennotificationsettingsurlstrin)
     - [Apple's iOS 15.4 documentation for `UIApplicationOpenNotificationSettingsURLString`](https://developer.apple.com/documentation/uikit/uiapplicationopennotificationsettingsurlstring)
     - [Apple's documentation for `openSettingsURLString`](https://developer.apple.com/documentation/uikit/uiapplication/1623042-opensettingsurlstring).
-## Contributing
+
+
+
+## 🫂 Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
+
+
 ## Author
+
  - [**@stringsaeed**](https://www.github.com/stringsaeed)
+
 
 
 ## License
@@ -70,9 +85,14 @@ MIT
 
 
 ### TODO:
+
 - [ ] Add tests
+
 - [ ] Add support for request permissions
+
 - [ ] Keeps updated with new native features
+
+
 
 ---
 
